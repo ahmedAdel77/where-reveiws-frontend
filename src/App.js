@@ -11,7 +11,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 //Components 
-import Authentication from './components/Authentication/Authentication';
+import Login from './components/Authentication/Login';
+import Register from './components/Authentication/Register';
 
 
 
@@ -25,7 +26,8 @@ function App() {
         <Fragment>
             <Switch>
 
-             <Route path="/Auth" component={Authentication}/>
+             <Route path="/login" component={Login}/>
+             <Route path="/register" component={Register}/>
 
 
             </Switch>
