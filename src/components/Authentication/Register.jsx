@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Joi from "joi-browser";
-//import axios from "axios";
+// import { register } from "../../actions/auth";
+// import { setAlert } from "../../actions/alert";
+//import { connect } from "react-redux";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
@@ -10,13 +14,26 @@ const Register = (props) => {
     email: "",
     password: "",
     password2: "",
+    // token: localStorage.getItem("token"),
+    // isAuthenticated: null,
+    // loading: true,
   });
 
   const [formError, setFormError] = useState({});
 
+  // const [authCheck, setAuthCheck] = useState ({
+
+  //   token: localStorage.getItem("token"),
+  //   isAuthenticated: null,
+  //   loading: true,
+  // })
+
   //Destraction
+  // const { name, email, password, password2 ,token,isAuthenticated,loading } = formData;
   const { name, email, password, password2 } = formData;
   // const {errors} = formError;
+
+  //const {token,isAuthenticated,loading} = authCheck;
 
   const schema = {
     name: Joi.string().required().min(2).label("Name"),
@@ -41,15 +58,50 @@ const Register = (props) => {
     }
 
     // setFormData({ ...formData, [target.name]: target.value });
-    setFormData({ ...data });
+    setFormData({ ...data, [target.name]: target.value });
     setFormError({ ...errors });
   };
 
   //HandelOnSubmit
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (password !== password2) {
-      console.log("Passwords do not match", "danger");
+      toast.error("Passwords do not match", "danger");
+    } else {
+      // register(name, email, password);
+      console.log("SuCcess");
+
+      //BackEnd
+      const newUser = {
+        userName: name,
+        email,
+        password,
+      };
+      try {
+        const config = {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        };
+        const body = JSON.stringify(newUser);
+        // setFormData({isAuthenticated:true,loading:false,token: localStorage.setItem("token", token)});
+        const res = await axios.post(
+          "http://localhost:3000/users",
+          body,
+          config
+
+          // setFormData({token: localStorage.setItem("token",res.data)})
+          // setAuthCheck = ({token:localStorage.setItem("token", token),isAuthenticated: true,
+          // loading: false})
+        );
+        console.log(res.data);
+        localStorage.setItem("token", res.data.token);
+
+        toast.success("Register Successfully");
+        props.history.replace("/login");
+      } catch (err) {
+        console.log(err.response.data);
+      }
     }
 
     //Validation :
@@ -66,26 +118,6 @@ const Register = (props) => {
       //   register({ name, email, password });
       console.log(formData);
       console.log(formError);
-
-      //BackEnd
-      //   const newUser = {
-      //     name,
-      //     email,
-      //     password,
-      //   };
-      //   try {
-      //     const config = {
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       }
-      //     };
-      //     const body = JSON.stringify(newUser);
-      //     const res = await axios.post('/users',body,config);
-      //     console.log(res.data);
-
-      //   } catch (err) {
-      //       console.log(err.response.data);
-      //     }
     }
   };
 
@@ -115,13 +147,23 @@ const Register = (props) => {
     return errors;
   };
 
+  // if (isAuthenticated) {
+  //   return <Redirect to="/dashboard" />;
+  // }
+
   return (
     <React.Fragment>
       <div className="AuthContainer">
         <Container fluid>
-          <h5 style={{ textAlign: "left", paddingLeft: "50px" }}>
+          <h5
+            style={{
+              textAlign: "left",
+              paddingLeft: "50px",
+              fontWeight: "600",
+            }}
+          >
             W H E R E{" "}
-            <span style={{ color: "#ffc107", fontWeight: "bold" }}>?</span>
+            {/* <span style={{ color: "#ffc107", fontWeight: "bold" }}>?</span> */}
           </h5>
           <Row>
             <Col lg={4}>
@@ -221,4 +263,5 @@ const Register = (props) => {
   );
 };
 
+// export default connect(null, { setAlert, register })(Register);
 export default Register;
