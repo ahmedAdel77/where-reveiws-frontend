@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Joi from "joi-browser";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 import { Link } from "react-router-dom";
 
@@ -46,14 +48,43 @@ const Login = (props) => {
     }
 
     // setFormData({ ...formData, [target.name]: target.value });
+    const userToken = localStorage.getItem("token");
+    if (userToken) {
+    }
     setFormData({ ...data });
     setFormError({ ...errors });
   };
 
   //HandelOnSubmit
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
+    //BackEnd
+    const newUser = {
+      email,
+      password,
+    };
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      const body = JSON.stringify(newUser);
+
+      const res = await axios.post("http://localhost:3000/auth", body, config);
+      // const { data } = await axios.get("http://localhost:3000/auth");
+      console.log(res);
+
+      // console.log(data);
+      // localStorage.setItem("token", data.token.token);
+
+      toast.success("WELCOME");
+      props.history.replace("/profile");
+    } catch (err) {
+      console.log(err.response.data);
+      toast.error("Sorrrry");
+    }
     //Validation :
     const errors = validate();
     // const errors = {error1: 'ERR01'};
@@ -68,6 +99,7 @@ const Login = (props) => {
       //   register({ name, email, password });
       console.log(formData);
       console.log(formError);
+      console.log(props);
     }
   };
 
@@ -160,7 +192,11 @@ const Login = (props) => {
                   )}
                   <a
                     href="/"
-                    style={{ float: "right", fontSize: "10px", color: "red" }}
+                    style={{
+                      float: "right",
+                      fontSize: "10px",
+                      color: "primary",
+                    }}
                   >
                     Forgot Password?
                   </a>
