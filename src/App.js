@@ -1,52 +1,93 @@
-import React, { Fragment } from "react";
+import React, { Component, Fragment, useState } from 'react';
+import axios from 'axios';
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/react-toastify/dist/ReactToastify.css";
-import "./App.css";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
+// import './App.scss';
+import './App.css';
+import './sass/main.scss';
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-
-//Redux
-import { Provider } from "react-redux";
-import store from "./store";
+import '@fortawesome/fontawesome-free/css/fontawesome.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import { ToastContainer } from 'react-toastify';
 
 //Components
-import Login from "./components/Authentication/Login";
-import Register from "./components/Authentication/Register";
-import Profile from "./components/Profile/profile";
+import Authentication from './components/Authentication/Authentication';
+import Header from './components/header';
+import Footer from './components/footer';
+import Home from './components/home';
+import Login from './components/Authentication/Login';
+import Register from './components/Authentication/Register';
+import Profile from './components/Profile/profile';
 
-// import { loadUser } from "./actions/auth";
-//import setAuthToken from "./utils/setAuthToken";
+class App extends Component {
+    state = {
+        places: [],
+    };
 
-//User Load
-// if (localStorage.token) {
-//   setAuthToken(localStorage.token);
-// }
+    async componentDidMount() {
+        // var {data}=await axios.get(process.env.REACT_APP_BACKEND_URL+"/Restraunts")
 
-function App() {
-  // useEffect(() => {
-  //   setAuthToken(localStorage.token);
-  //   store.dispatch(loadUser());
-  // }, []);
+        // const { match: { params } } = this.props;
+        // var { data } = await axios.get(`http://localhost:3000/places/${params.place}`);
+        console.log('[ComponentDidMount] ', window.location.pathname);
+        var { data } = await axios.get(
+            `http://localhost:3000${window.location.pathname}`
+        );
+        console.log(data.places);
+        this.setState({
+            places: data.places,
+            PageNo: data.response?.pages,
+            PageCount: data.response?.pagesCount,
+            activePage: 1,
+            pageSize: 6,
+        });
+        /// console.log(this.state.places)
+    }
+    // function App() {
+    // const [places, setPlaces] = useState([]);
+    render() {
+        console.log('[APP] ', typeof window.location.pathname);
+        return (
+            <Fragment>
+                <Router>
+                    <ToastContainer />
 
-  return (
-    <Provider store={store}>
-      <ToastContainer />
-      <Router>
-        <Fragment>
-          <Switch>
-            <Route path="/login" render={(props) => <Login {...props} />} />
-            <Route
-              path="/register"
-              render={(props) => <Register {...props} />}
-            />
-            <Route path="/profile" component={Profile} />
-          </Switch>
-        </Fragment>
-      </Router>
-    </Provider>
-  );
+                    {/* {window.location.pathname == '/register' ||
+                    window.location.pathname == '/login' ? (
+                        ''
+                    ) : (
+                        <Header />
+                    )} */}
+
+                    {/* <Container className="mt-5 mb-5"> */}
+
+                    <Switch>
+                        <Route
+                            path="/login"
+                            render={(props) => <Login {...props} />}
+                        />
+                        <Route
+                            path="/register"
+                            render={(props) => <Register {...props} />}
+                        />
+                        <Route path="/profile" component={Profile} />
+                        <Route path="/Auth" component={Authentication} />
+                        <Route path="/" component={Home} />
+                    </Switch>
+                    {/* </Container> */}
+
+                    {/* {window.location.pathname == '/register' ||
+                    window.location.pathname == '/login' ? (
+                        ''
+                    ) : (
+                        <Footer />
+                    )} */}
+                </Router>
+            </Fragment>
+        );
+    }
 }
 
 export default App;

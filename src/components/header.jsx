@@ -1,3 +1,9 @@
+//#region Material UI
+
+/*************************************/
+// Material UI
+/*************************************/
+
 // import React, { Fragment } from 'react';
 
 // import { makeStyles } from '@material-ui/core/styles';
@@ -41,3 +47,106 @@
 // };
 
 // export default Header;
+//#endregion
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+/*************************************/
+// React Booststrap
+/*************************************/
+
+import React, { Fragment, useState } from 'react';
+
+import { Link, NavLink } from 'react-router-dom';
+
+import {
+    Navbar as ReactNavbar,
+    Button,
+    Row,
+    Column,
+    Col,
+    NavDropdown,
+    Form,
+    FormControl,
+    Container,
+    Nav,
+} from 'react-bootstrap';
+import Navbar from './navbar';
+
+const Header = (props) => {
+    const [query, setQuery] = useState('');
+
+    return (
+        <Fragment>
+            <ReactNavbar
+                // bg="light"
+                variant="light"
+                bsPrefix="no"
+                className="nav-header"
+                style={{ backgroundColor: '#fff' }}
+            >
+                <Row lg={3}>
+                    <Col></Col>
+                    <Col>
+                        <ReactNavbar.Brand
+                            as={NavLink}
+                            to="/"
+                            className="nav-brand"
+                        >
+                            <span className="nav-brand__text">Where</span>
+                        </ReactNavbar.Brand>
+                    </Col>
+                    <Col>
+                        <div>
+                            <Link to="/login">
+                                <Button variant="primary" className="mr-1">
+                                    Sign in
+                                </Button>
+                            </Link>
+                            <Link to="/register">
+                                <Button variant="outline-primary">
+                                    Register
+                                </Button>
+                            </Link>
+                        </div>
+                    </Col>
+                </Row>
+            </ReactNavbar>
+            <Navbar />
+            <Nav
+                activeKey="/home"
+                onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+                fill
+                className="navbar"
+                as="nav"
+                navbar
+                bsPrefix="nav"
+                bg="light"
+                style={{ backgroundColor: '#fff' }}
+                className="mt-3"
+            >
+                <Container className="d-flex flex-row justify-content-center pb-4">
+                    <Form inline>
+                        <FormControl
+                            type="text"
+                            placeholder="Search"
+                            className="mr-sm-2 search-field"
+                            as={'input'}
+                            value={query}
+                            onChange={({ target }) => setQuery(target.value)}
+                            // style={{ width: '130px' }}
+                        />
+                        <Button
+                            variant="outline-primary"
+                            onClick={() => alert(query)}
+                        >
+                            Search
+                        </Button>
+                    </Form>
+                </Container>
+            </Nav>
+        </Fragment>
+    );
+};
+
+export default Header;
