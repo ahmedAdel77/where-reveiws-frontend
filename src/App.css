@@ -1,38 +1,349 @@
-.App {
+
+html{
+  font-size: 62.5%;
+
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+  background-color: #f2f2f2;
+}
+.FilterTitle{
+
+  margin-bottom: 1.5rem;
+}
+.card{
+  font-size: 1.4rem;
+}
+.title{
+  font-size:2.2rem;
+}
+.star{
+  color:gold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.placesCard{
+  flex-wrap: nowrap;
+}
+.chk_container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.Menu_Heading{
+  margin: auto;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.Aside-Menu{
+  background-color: white;
+  /* max-width: 20%; */
+  margin-bottom: 10rem;
+}
+/* .location{
+  opacity: 1;
+  margin-left: 15%;
+} */
+.appear{
+  opacity: 1;
+  margin-left: 15%;
+  height: 3rem;
+
+}
+.disappear{
+  opacity: 0;
+  margin-left: 15%;
+  height: 3rem;
+
+}
+.filtercheck{
+margin-right: 1.2rem;
+}
+.location{
+  opacity: 0;
+}
+.chklabel{
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+}
+.chk_container{
+  padding-bottom: 2rem;
+}
+.C-txt{
+
+margin-top: 1.2rem;
+max-width: 80%;
+white-space: pre-wrap;
+}
+.MycardCarouselImg{
+  height: 23rem;
+}
+.card-compnents{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-Price,.card-Location,.card-Review,.card-Price-p,.card-Location-P,.card-Review-P{
+
+  margin-right: 5rem;
+  align-self: center;
+}
+
+a:hover{
+  text-decoration: none;
+}
+.details-header img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-col {
+  min-height: 400px;
+  max-height: 450px;
+  padding: 0 2px;
+}
+
+/* body {
+  background-color: rgba(0, 0, 0, 0.1);
+} */
+
+Container {
+  background-color: #fff;
+}
+
+.img-sm-col {
+  min-height: 200px;
+  max-height: 225px;
+}
+
+.details-card {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 6% 5%;
+  min-height: 250px;
+  max-height: 500px;
+}
+
+.card-title {
+  margin-bottom: 5% !important;
+}
+
+.card-img {
+
+  margin-top: 1.25rem;
+  min-height: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.star-container {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4%;
+}
+
+.card-text {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.review-card {
+  border: none;
+}
+
+.review-form-input{
+width: 70%;
+}
+.review-form {
+  padding: 2% 5%;
+}
+.recent{
+  /* border-right: 1px solid rgba(0, 0, 0, 0.1); */
+  box-shadow: inset 8px 0 9px -8px rgba(0,0,0,.2);
+}
+.error{
+  font-weight: 500;
+
+}
+
+
+/* **************************  START AUTH PAGE  ************************** */
+.AuthContainer {
+  margin-top: 50px;
+  text-align: left;
+}
+.AuthForm {
+  width: 50%;
+  margin: auto;
+  padding-left: 100px;
+  margin-top: 50px;
+}
+
+.Authwelcome {
+  margin-bottom: 40px;
+}
+.Authbtn {
+  /* border-radius: 0; */
+  padding: 5px 20px;
+  margin-bottom: 20px;
+}
+.error {
+  color: #d8000c;
+  /* background-color: #FFD2D2; */
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* ************************** START Alert  ************************** */
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
+
+.alert-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.alert-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.alert-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.alert-white {
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+}
+
+/* ************************** END AUTH PAGE  ************************** */
+
+/* ************************** START PROFILE PAGE  ************************** */
+
+.ProfileContainer {
+  background-color: #f2f2f2;
+  height: 1000px;
+  padding: 100px;
+}
+.headerprofile {
+  background-color: #fff;
+  padding-top: 100px;
+}
+.profileImg {
+  margin-top: -60px;
+}
+.nav-link {
+  color: #373535;
+}
+.headerprofile2 {
+  /* background-color: #fff; */
+  margin-top: 30px;
+}
+.btn-outline-dark {
+  color: #050606;
+  border-color: #343638;
+  border-radius: inherit;
+}
+
+.Authbtn {
+  /* border-radius: 0; */
+  padding: 5px 15px;
+  margin-bottom: 20px;
+}
+.introContainer {
+  background-color: #fff;
+}
+.intro {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.intro h6 {
+  margin-bottom: 20px;
+}
+.intro span {
+  font-size: 13px;
+  color: #4a4a4a;
+}
+.intro i {
+  font-size: 13px;
+  color: #4a4a4a;
+}
+.fillPost {
+  padding: 50px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.postReview {
+  padding: 20px;
 }
+.rate {
+  font-size: 10px;
+  margin-bottom: 10px;
+  color: #222;
+}
+/* ************************** START @media  ************************** */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1200px) {
+  .AuthContainer h5 {
+    text-align: center;
+  }
+  .AuthForm {
+    width: 80%;
+    padding-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .AuthPic img {
+    width: 80%;
+    margin: auto;
+    text-align: center;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 768px) and (max-width: 1024px) {
+  .AuthContainer h5 {
+    text-align: center;
+    color: red;
   }
-  to {
-    transform: rotate(360deg);
+  .AuthForm {
+    width: 80%;
+    padding-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .AuthPic img {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 200px;
   }
 }

@@ -1,0 +1,454 @@
+[
+	{
+		"category": "Restraunts",
+		"placeName": "CookDoor",
+			"maxPrice": 130,
+			"minPrice": 40,
+		
+		"location": "Zamalek",
+		"Reviewers": [
+			{
+				"userName": "Dina Alaa",
+				"email": "dinaalaagalal@gmail.com",
+				"password": "dina123",
+				"review": [
+					{
+						"reviewSecret": 1,
+						"reviewComment": "very good restraunt",
+                         "rating": 4
+					}
+					]
+				},
+					{
+						"userName": "Esraa Emad",
+						"email": "EsraaEmad@gmail.com",
+						"password": "esraa123",
+						"review": [
+							{
+								"reviewSecret": 2,
+								"reviewComment": "I like it a lot",
+								"rating": 5
+							}
+						]
+					}
+				]
+			,
+		
+		"About": "Cook Door, founded in 1988, gained popularity within the Egyptian market/youth. Starting from just one branch in Heliopolis, until recently expanding within the last few years to multiple branches including other governorates.",
+		"photos": ["3.JPG","5.JPG"],
+
+		"date": "new Date()"
+	},
+	{
+		"category": "Restraunts",
+		"placeName": "Abo Mazen",
+			"maxPrice": "120",
+			"minPrice": "25",
+		"location": "nasr City",
+		"Reviewers": [
+			{
+				"userName": "Linda Mussa",
+				"email": "LindaMoussa@gmail.com",
+				"password": "lina123",
+				"review": [
+					{
+						"reviewSecret": 3,
+						"reviewComment": "wow so delicious",
+						"rating": "5"
+					}
+				]
+			}
+		],
+		"About": "very testy shawerma and sheish and all chicken and mmeat stuffs",
+		"photos": ["3.JPG","5.JPG"],
+		"date": "new Date()"
+	},
+	{
+		"category": "Restraunts",
+		"placeName": "Abo Mazen",
+		
+			"maxPrice": 120,
+			"minPrice": 25
+		,
+		"location": "nasr City",
+		"Reviewers": [
+			{
+				"userName": "Linda Mussa",
+				"email": "LindaMoussa@gmail.com",
+				"password": "lina123",
+				"review": [
+					{
+						"reviewSecret": 4,
+						"reviewComment": "wow so delicious",
+						"rating": "5"
+					}
+				]
+			}
+		],
+		"About": "very testy shawerma and sheish and all chicken and mmeat stuffs",
+		"photos": ["3.JPG","5.JPG"],
+
+		"date": "new Date()"
+	},
+	{
+		"category": "Restraunts",
+		"placeName": "Dsoki&Soda",
+			"maxPrice": 200,
+			"minPrice": 40,
+		
+		"location": "Nasr City",
+		"Reviewers": [
+			{
+				"userName": "Ahmed Adel",
+				"email": "AhmedAdel@gmail.com",
+				"password": "ahmed123",
+				"review": [
+					{
+						"reviewSecret": 5,
+						"reviewComment": "good menu Iliked the chessy burger alot",
+                         "rating": 4
+					}
+					]
+				},
+					{
+						"userName": "Cady Emad",
+						"email": "CadyEmad@gmail.com",
+						"password": "cady123",
+						"review": [
+							{
+								"reviewSecret": 6,
+								"reviewComment": "their drinks are perfect",
+								"rating": 5
+							}
+						]
+					}
+				]
+			,
+		
+		"About": "Desoky & Soda is a restaurant located in Egypt, serving a selection of Pasta that delivers across Tagammoa 5 - El Yasmeen 7, Tagammoa 5 - El Yasmeen 2 and Tagammoa5 - El Lotus El Ganoubeya.",
+		"photos": ["3.JPG","5.JPG"],
+
+		"date": "new Date()"
+	},{
+		"category": "Restraunts",
+		"placeName": "Estoda",
+			"maxPrice":300,
+			"minPrice":50,
+		"location": "Masaken Sheraton",
+		"Reviewers": [
+			{
+				"userName": "Bella Mohammed",
+				"email": "bella@gmail.com",
+				"password": "bella123",
+				"review": [
+					{
+						"reviewSecret": 7,
+						"reviewComment": "wow so delicious",
+						"rating": "5"
+					}
+				]
+			}
+		],
+		"About": " Estoda Cheese King branches Masaken Sheraton,Mhandseen ",
+		"photos": ["3.JPG","5.JPG"],
+		"date": "new Date()"
+	},
+	{
+		"category": "Restraunts",
+		"placeName": "KFC",
+			"maxPrice":300,
+			"minPrice":50,
+		"location": "Masr El Gedida",
+		"Reviewers": [
+			{
+				"userName": "Merna Nashaat",
+				"email": "merna@gmail.com",
+				"password": "merna123",
+				"review": [
+					{
+						"reviewSecret": 8,
+						"reviewComment": "nice chrispy chicken",
+						"rating": "5"
+					}
+				]
+			}
+		],
+		"About": "KFC is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken. It is the world's second-largest restaurant chain after McDonald's, with 22,621 locations globally in 150 countries as of December 2019",
+		"photos": ["3.JPG","5.JPG"],
+		"date": "new Date()"
+	},	
+	{
+		"category": "Restraunts",
+		"placeName": "Pizza Hut",
+			"maxPrice":300,
+			"minPrice": 80,
+		"location": "Maadi",
+		"Reviewers": [
+			{
+				"userName": "Hala farid",
+				"email": "hala@gmail.com",
+				"password": "hala123",
+				"review": [
+					{
+						"reviewSecret": 9,
+						"reviewComment": "nice Pizaa and salats",
+						"rating": "5"
+					}
+				]
+			}
+		],
+		"About": "Pizza Hut is an American restaurant chain and international franchise which was founded in 1958 in Wichita, Kansas by Dan and Frank Carney. ",
+		"photos": ["3.JPG","5.JPG"],
+		"date": "new Date()"
+	},
+	{
+		"category": "Restraunts",
+		"placeName": "Sob7y kaber",
+			"maxPrice":400,
+			"minPrice": 60,
+		"location": "Shobra",
+		"Reviewers": [
+			{
+				"userName": "Sara Agamy",
+				"email": "sara@gmail.com",
+				"password": "sara123",
+				"review": [
+					{
+						"reviewSecret": 10,
+						"reviewComment": "very nice tasty egyptian meals",
+						"rating": "4"
+					}
+				]
+			}
+		],
+		"About": "Egyptian hme made food lcated in 151 Ebeid, As Sahel,Cairo",
+		"photos": ["3.JPG","5.JPG"],
+		"date": "new Date()"
+	},
+	{
+		"category": "Cinemas",
+		"placeName": "Renaissance Cinemas - Metro Cairo",
+			"maxPrice":120,
+			"minPrice": 40,
+		
+		"location": " Down Town Cairo",
+		"Reviewers": [
+			{
+				"userName": "Ahmed Abbas",
+				"email": "Abs@gmail.com",
+				"password": "Abs123",
+				"review": [
+					{
+						"reviewSecret": 11,
+						"reviewComment": "very good Cinema",
+                         "rating": 4
+					}
+					]
+				},
+					{
+						"userName": "Esraa Emad",
+						"email": "EsraaEmad@gmail.com",
+						"password": "esraa123",
+						"review": [
+							{
+								"reviewSecret": 12,
+								"reviewComment": "I like it a lot nice place",
+								"rating": 3
+							}
+						]
+					}
+				]
+			,
+		
+		"About": "Renaissance Cinemas is an Egyptian cinema chain company. It operates 21 cinemas covering 99 screens",
+		"photos": ["c1.JPG","c2.JPG"],
+
+		"date": "new Date()"
+	},
+	{
+		"category": "Cinemas",
+		"placeName": "Zamalek Cinema",
+			"maxPrice":120,
+			"minPrice": 25,
+		"location": "Zamalek",
+		"Reviewers": [
+			{
+				"userName": "Linda Mussa",
+				"email": "LindaMoussa@gmail.com",
+				"password": "lina123",
+				"review": [
+					{
+						"reviewSecret": 13,
+						"reviewComment": "good one",
+						"rating": "5"
+					}
+				]
+			}
+		],
+		"About": "13 Shagaret Al Dor, Mohammed Mazhar, Zamalek, Cairo Governorate",
+		"photos": ["c1.JPG","c2.JPG"],
+		"date": "new Date()"
+	},
+	{
+		"category": "Cinemas",
+		"placeName": "Renaissance Cinema",
+		
+			"maxPrice":120,
+			"minPrice": 50
+		,
+		"location": " Bulaq",
+		"Reviewers": [
+			{
+				"userName": "Linda Mussa",
+				"email": "LindaMoussa@gmail.com",
+				"password": "lina123",
+				"review": [
+					{
+						"reviewSecret": 14,
+						"reviewComment": "good cinema",
+						"rating": "5"
+					}
+				]
+			}
+		],
+		"About": "Address: Boulaq Num.1, Bulaq, Cairo Governorate",
+		"photos": ["c1.JPG","c2.JPG"],
+
+		"date": "new Date()"
+	},
+	{
+		"category": "Cinemas",
+		"placeName": "Odeon Cinema",
+			"maxPrice":200,
+			"minPrice": 40,
+		
+		"location": "Nasr City",
+		"Reviewers": [
+			{
+				"userName": "Ahmed Adel",
+				"email": "AhmedAdel@gmail.com",
+				"password": "ahmed123",
+				"review": [
+					{
+						"reviewSecret": 15,
+						"reviewComment": "latest mvies are always there",
+                         "rating": 4
+					}
+					]
+				},
+					{
+						"userName": "Cady Emad",
+						"email": "CadyEmad@gmail.com",
+						"password": "cady123",
+						"review": [
+							{
+								"reviewSecret": 16,
+								"reviewComment": "nice effects and services",
+								"rating": 5
+							}
+						]
+					}
+				]
+			,
+		
+		"About": "Address: 15 Emad El-Deen, Oraby, Al Azbakeya, Cairo Governorate",
+		"photos": ["c1.JPG","c2.JPG"],
+
+		"date": "new Date()"
+	},{
+		"category": "Cinemas",
+		"placeName": "Odeon Cinema",
+			"maxPrice": 120,
+			"minPrice": 50,
+		"location": " Qasr El Nil",
+		"Reviewers": [
+			{
+				"userName": "Bella Mohammed",
+				"email": "bella@gmail.com",
+				"password": "bella123",
+				"review": [
+					{
+						"reviewSecret": 17,
+						"reviewComment": "perfect Cinema",
+						"rating": "5"
+					}
+				]
+			}
+		],
+		"About": "Talaat Harb, Marouf, Qasr El Nil ",
+		"photos": ["c1.JPG","c2.JPG"],
+		"date": "new Date()"
+	},
+	{
+		"category": "Cinemas",
+		"placeName": "Galaxy cinema",
+			"maxPrice": 150,
+			"minPrice": 50,
+		"location": "Manyal Al Gharbi",
+		"Reviewers": [
+			{
+				"userName": "Merna Nashaat",
+				"email": "merna@gmail.com",
+				"password": "merna123",
+				"review": [
+					{
+						"reviewSecret": 18,
+						"reviewComment": "i don't like it",
+						"rating": "2"
+					}
+				]
+			}
+		],
+		"About": "Abdulaziz Al Saud, Al Manyal Al Gharbi, Old Cairo, Cairo Governorate",
+		"photos": ["c1.JPG","c2.JPG"],
+		"date": "new Date()"
+	},	
+	{
+		"category": "Cinemas",
+		"placeName": "Al-Tahrir Cinema",
+			"maxPrice":80,
+			"minPrice": 30,
+		"location": "Dokki",
+		"Reviewers": [
+			{
+				"userName": "Hala farid",
+				"email": "hala@gmail.com",
+				"password": "hala123",
+				"review": [
+					{
+						"reviewSecret": 19,
+						"reviewComment": "not bad",
+						"rating": "3"
+					}
+				]
+			}
+		],
+		"About": "Address: 122 El Tahrir, Ad Doqi A, Dokki, Giza Governorate",
+		"photos": ["c1.JPG","c2.JPG"],
+		"date": "new Date()"
+	},
+	{
+		"category": "Cinemas",
+		"placeName": "Cosmos Cinema",
+			"maxPrice": 110,
+			"minPrice": 60,
+		"location": "Al Azbakeya",
+		"Reviewers": [
+			{
+				"userName": "Sara Agamy",
+				"email": "sara@gmail.com",
+				"password": "sara123",
+				"review": [
+					{
+						"reviewSecret": 20,
+						"reviewComment": "perfect one",
+						"rating": "4"
+					}
+				]
+			}
+		],
+		"About": "Address: 17 Emad El-Deen, Oraby, Al Azbakeya, Cairo Governorate",
+		"photos": ["c1.JPG","c2.JPG"],
+		"date": "new Date()"
+	}
+]
